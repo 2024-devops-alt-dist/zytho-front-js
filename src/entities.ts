@@ -10,6 +10,9 @@ export interface Beer {
     abv: number;
     id_brewery: number;
     id_category: number;
+    category: string;
+    brewery: string;
+    country: string;
 }
 
 export interface Brewery {

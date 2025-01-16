@@ -22,12 +22,23 @@ function Detail() {
   }, [id]);
 
   return (
-    <div>
-      <img src="https://plus.unsplash.com/premium_photo-1725075086810-37e14268e5ec?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-      <h1>Détails de la bière {id}</h1>
-      <p>{beer?.name}</p>
-      <p>{beer?.description}</p>
-      <p>{beer?.abv}</p>
+    
+    <div className="w-full bg-gray-800">
+       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+       <div className="text-center pb-12">
+      <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-white">
+        {beer?.name}
+      </h1>
+      </div>
+     
+      <div className=" py-8 sm:py-6">
+        <p className="text-xl text-white font-bold mb-2">Category : {beer?.category}</p> 
+        <p className="text-xl text-white font-normal mb-2">{beer?.description}</p>
+        <p className="text-base text-gray-400 font-normal  mb-2">{beer?.brewery}, country : {beer?.country}</p>
+        <p className="text-base text-gray-200  mb-2">Abv : {beer?.abv}</p>
+      </div>
+      
+      </section>
     </div>
   );
 }
