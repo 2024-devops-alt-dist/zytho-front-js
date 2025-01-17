@@ -1,13 +1,12 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import React from 'react';
-import beerPng from '/home/juliette/dev/zytho-front-js/src/assets/beer.png';
+import beerPng from '../assets/beer.png';
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
+  { name: 'Beers', href: '#', current: true },
+  { name: 'Breweries', href: '#', current: false },
   { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Team', href: '#', current: false },
 ]
 
 function classNames(...classes) {
