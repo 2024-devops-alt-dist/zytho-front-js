@@ -2,16 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *{
-  font-family: Montserrat;
-} */
 
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
+#root {
+background-color: #1f2937;
+}
+
+.navbar-img {
+  width: 2rem;
+  height : 2rem
+}
 
 .logo {
   height: 6em;
