@@ -29,7 +29,8 @@ function Breweries() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {breweries && breweries.map((brewery) =>
-        <div key={brewery.id} className="w-full bg-gray-900 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+    <a  key={brewery.id} href={`/breweries/${brewery.id}`}>
+        <div className="w-full bg-gray-900 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
                 <div>
                     <img className="object-center object-cover h-auto w-full" src="https://images.unsplash.com/photo-1532634733-cae1395e440f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="photo" />
                 </div>
@@ -37,7 +38,8 @@ function Breweries() {
                     <p className="text-xl text-white font-bold mb-2">{brewery.name}</p>
                     <p className="text-base text-gray-400 font-normal">{brewery.country}</p>
                 </div>
-            </div>)}
+            </div>
+        </a>)}
     </div>
 </section>
 </div>
