@@ -1,34 +1,41 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import beerPng from '../assets/beer.png';
+import pintPng from '../assets/pint.png';
+import packPng from '../assets/pack.png';
+import breweryPng from '../assets/brewery.png';
+
+
+
 
 const features = [
   {
     name: 'Beers from everywhere',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
-    icon: CloudArrowUpIcon,
+      'Belgium, Germany, France, UK, Canada, North America... Our destinations are as diverse as tasty. ',
+    img: beerPng,
   },
   {
     name: 'Discover breweries',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
-    icon: LockClosedIcon,
+      'So that you can discover all the beers from one brewery ! Learn more about the breweries, their country, their history, etc',
+    img: breweryPng,
   },
   {
     name: 'Learn more about beers',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-    icon: ArrowPathIcon,
+      'What type of beer is it ? What brewery does it come from ? What are its ingredients ? So many questions Zythologue can answer for you',
+    img: packPng,
   },
   {
     name: 'Save your favourite',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-    icon: FingerPrintIcon,
+      'Get ready to start your own beer collection, or simply save the beers you want to find later in the database !',
+    img: pintPng,
   },
 ]
 
 export default function Hero() {
   return (
+    <section className="bg-gray-800 w-100">
     <div className=" mx-auto max-w-7xl  py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -37,8 +44,7 @@ export default function Hero() {
             Zythologue
           </p>
           <p className="mt-6 text-lg/8 text-gray-200">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
+            The one and only beer database you didn't know you were lacking. Get ready for a game changer ! Discover beers from all around the world, their breweries, their ingredients. Browse and enjoy !
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -46,8 +52,9 @@ export default function Hero() {
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base/7 font-semibold text-gray-200">
-                  <div className="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <feature.icon aria-hidden="true" className="size-6 text-white" />
+                  <div className="">
+                    <img src = {feature.img}
+                    className='absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg img-css h-10 w-auto'/>
                   </div>
                   {feature.name}
                 </dt>
@@ -57,6 +64,6 @@ export default function Hero() {
           </dl>
         </div>
       </div>
-    </div>
+    </div></section>
   )
 }

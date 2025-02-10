@@ -4,6 +4,7 @@ import About from './pages/about.tsx'
 import Detail from './pages/Detail.tsx'
 import { Routes, Route } from "react-router";
 import Beers from "./pages/Beers.tsx";
+import Breweries from "./pages/Breweries.tsx";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/beers" element={<Beers />} />
+        <Route path="/breweries" element={<Breweries />} />
+
       </Routes>
     </>
   );

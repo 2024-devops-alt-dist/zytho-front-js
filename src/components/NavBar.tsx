@@ -3,10 +3,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import beerPng from '../assets/beer.png';
 
 const navigation = [
-  { name: 'Beers', href: '#', current: true },
-  { name: 'Breweries', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Team', href: '#', current: false },
+  { name: 'Home', href: '/', current: true },
+  { name: 'Beers', href: '/beers', current: false },
+  { name: 'Breweries', href: '/breweries', current: false },
+  { name: 'About', href: '#', current: false },
 ]
 
 function classNames(...classes) {
@@ -31,7 +31,7 @@ export default function NavBar() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
               <img
-                alt="Your Company"
+                alt="Zythologue"
                 src={beerPng}
                 className="h-8 w-auto"
               />
